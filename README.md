@@ -1,4 +1,4 @@
-This project is a template for typical Spring Boot + Gradle case.
+This project is a copy of [spring-boot-template](https://gitlab.inventale.com/platform/templates/spring-boot-template) written using kotlin.
 
 ## Modules
 
@@ -43,6 +43,8 @@ You can find it after application starts: `http://localhost:8090/actuator/`
 
 * To change active profiles, you can change the value of the `spring.profiles.active` property in `config/application.yml`
 or override this property by environment one. See order and other helpful information in the article https://docs.spring.io/spring-boot/docs/1.2.2.RELEASE/reference/html/boot-features-external-config.html.
+
+* See swagger schema: http://localhost:8090/swagger-ui.html
 
 ## Dependency check
 
@@ -140,3 +142,22 @@ This link works only with Maxifier VPN.
 
 Prometheus can be used as a datasource for Grafana. You can see a dashboard here: https://grafana.inventale.com/d/j9ouX_NGz/platform?orgId=1&from=now-15m&to=now
 ![](resources/grafana.png)
+
+### Kotlin Code Style
+
+We use [ktlint](https://github.com/pinterest/ktlint) and [ktlint-gradle](https://github.com/jlleitschuh/ktlint-gradle) 
+plugin to check code style.
+Rules based on kotlinlang.org and [Android Kotlin Style Guide](https://developer.android.com/kotlin/style-guide) are defined in `.editorconfig`
+
+The `ktlintCheck` task called automatically after default `check`, so your build won't pass if there are code style issues.
+
+It's recommended to update your IDE settings according to rules defined in `.editorconfig`.
+
+Use `./gradlew ktlintApplyToIdea` to change Intellij Idea code style settings.
+The task generates IntelliJ IDEA (or Android Studio) Kotlin style files in the project .idea/ folder. Note that this tasks will overwrite the existing style file
+
+Alternatively you can use `./gradlew ktlintApplyToIdeaGlobally`. 
+The task generates IntelliJ IDEA (or Android Studio) Kotlin style files in the user home IDEA (or Android Studio) settings folder. 
+Note that this task will overwrite the existing style file.
+
+To fix issues automatically please use `./gradlew ktlintFormat`, but some problems like `*` imports can be fixed manually only.
