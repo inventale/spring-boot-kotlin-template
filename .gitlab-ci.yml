@@ -48,6 +48,7 @@ it:
 
 owasp:
   stage: verify
+#  enable when https://github.com/jeremylong/DependencyCheck/issues/1742 is fixed
   when: manual
   script:
     - ./gradlew dependencyCheckAnalyze
