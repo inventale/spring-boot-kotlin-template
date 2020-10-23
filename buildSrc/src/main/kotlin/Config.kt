@@ -12,7 +12,6 @@ object Versions {
 
     //Libs
     const val springBoot = "2.3.4.RELEASE"
-    const val javaxAnnotation = "1.3.2"
     const val micrometer = "1.5.5"
     const val jacksonKotlin = "2.11.1"
     const val loggerVersion = "2.0.3"

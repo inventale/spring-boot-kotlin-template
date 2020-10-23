@@ -48,6 +48,7 @@ it:
 
 owasp:
   stage: verify
+  when: manual
   script:
     - ./gradlew dependencyCheckAnalyze
   except:
