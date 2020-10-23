@@ -8,7 +8,6 @@ group = "com.inventale.project"
 
 dependencies {
     api(project(":model"))
-    api(Libs.javaxAnnotation)
 
     implementation(Libs.logger)
     implementation(Libs.jacksonKotlin)

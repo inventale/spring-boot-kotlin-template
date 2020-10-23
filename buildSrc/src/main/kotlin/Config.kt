@@ -37,7 +37,6 @@ object Plugins {
 object Libs {
     const val jacksonKotlin = "com.fasterxml.jackson.module:jackson-module-kotlin:${Versions.jacksonKotlin}"
     const val kotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:${Versions.kotlin}"
-    const val javaxAnnotation = "javax.annotation:javax.annotation-api:${Versions.javaxAnnotation}"
     const val logger = "io.github.microutils:kotlin-logging:${Versions.loggerVersion}"
 
     const val springBootStarter = "org.springframework.boot:spring-boot-starter:${Versions.springBoot}"

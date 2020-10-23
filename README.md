@@ -1,5 +1,13 @@
 This project is a copy of [spring-boot-template](https://gitlab.inventale.com/platform/templates/spring-boot-template) written using kotlin.
 
+## Key differences from spring-boot-template
+1) Kotlin instead of Java ;)
+2) No lombock required anymore
+3) Plugins `plugin.allopen` and `org.jetbrains.kotlin.plugin.spring` should be enabled for a correct work of Spring
+4) It's better to have artifacts `jackson-module-kotlin` and `kotlin-reflect` in the classpath for a correct work of Spring
+5) [kotlin-logging](https://github.com/MicroUtils/kotlin-logging) as a wrapper for Slf4j
+6) [mockito-kotlin](https://github.com/nhaarman/mockito-kotlin) instead of pure mockito for tests
+
 ## Modules
 
 1) buildSrc - Gradle dependencies and plugins configuration
@@ -11,7 +19,6 @@ This project is a copy of [spring-boot-template](https://gitlab.inventale.com/pl
 
 ## How to start
 
-1) Enable Lombock support in your IDE, see https://gitlab.inventale.com/platform/spring-boot-template/wikis/Enable-Lombock-in-Idea for details
 1) Run `com.inventale.project.HelloWorldApplication`
 2) Try it: `curl localhost:8090/hello -v`
 
@@ -121,27 +128,6 @@ An example of usage of `@Timed` annotation can be found in `com.inventale.projec
 This annotation requires the `io.micrometer.core.aop.TimedAspect` bean defined in your Spring configuration.
 
 JVM metrics like memory usage and CPU utilization are exported by default.
-
-## How to run application on AWS
-
-1) Login to inventale-dev (6543-7075-3871) AWS account.
-2) Navigate to instance https://eu-west-1.console.aws.amazon.com/ec2/v2/home?region=eu-west-1#InstanceDetails:instanceId=i-09ca0c1024757321d
-3) Start Instance (Actions -> Start Instance)
-
-If this instance has been deleted, you can your own with Amazon Machine Image with id `ami-08dd8b0ac2036800e` and name `Spring Boot Template`.
-
-Please see the article how to create eс2 instance from custom AMI https://aws.amazon.com/premiumsupport/knowledge-center/launch-instance-custom-ami/ 
-
-This AMI is available only in Ireland on inventale-dev account - nowhere else it will be available.
-
-Service will be started on instance startup.
-
-You can see these metrics in [Prometheus UI](http://prom-de.inventale.com:9090/graph?g0.range_input=1h&g0.expr=hello_world_letters_number&g0.tab=1&g1.range_input=1h&g1.expr=hello_world_letters_number&g1.tab=1&g2.range_input=1h&g2.expr=hello_message_provider_timed_seconds_sum&g2.tab=1&g3.range_input=1h&g3.expr=http_server_requests_seconds_sum&g3.tab=1).
-This link works only with Maxifier VPN.
-![](resources/prometheus.png)
-
-Prometheus can be used as a datasource for Grafana. You can see a dashboard here: https://grafana.inventale.com/d/j9ouX_NGz/platform?orgId=1&from=now-15m&to=now
-![](resources/grafana.png)
 
 ### Kotlin Code Style
 
