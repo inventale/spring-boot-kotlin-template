@@ -25,6 +25,12 @@ dependencies {
     implementation(Libs.springdocOpenapiKotlin)
     implementation(Libs.kotlinReflect)
 
+    // put app logs in json format
+    implementation(Libs.logstashLogbackEncoder)
+    implementation(Libs.logbackClassic)
+    implementation(Libs.logbackCore)
+    implementation(Libs.logbackAccess)
+
     implementation(Libs.logger)
     implementation(Libs.jacksonKotlin)
     implementation(Libs.kotlinReflect)

@@ -17,6 +17,10 @@ object Versions {
     const val loggerVersion = "2.0.3"
     const val springdocOpenapi = "1.4.8"
 
+    // logs
+    const val logbackClassic = "1.2.3"
+    const val logstashLogbackEncoder = "6.3"
+
     // Libs for testing
     const val junit = "5.7.0"
     const val mockitoKotlin = "1.6.0"
@@ -49,6 +53,12 @@ object Libs {
     // metrics
     const val micrometerPrometheus = "io.micrometer:micrometer-registry-prometheus:${Versions.micrometer}"
     const val micrometerCore = "io.micrometer:micrometer-core:${Versions.micrometer}"
+
+    // logs
+    const val logstashLogbackEncoder = "net.logstash.logback:logstash-logback-encoder:${Versions.logstashLogbackEncoder}"
+    const val logbackClassic = "ch.qos.logback:logback-classic:${Versions.logbackClassic}"
+    const val logbackCore = "ch.qos.logback:logback-core:${Versions.logbackClassic}"
+    const val logbackAccess = "ch.qos.logback:logback-access:${Versions.logbackClassic}"
 
     // Test libraries
     const val junit = "org.junit.jupiter:junit-jupiter-api:${Versions.junit}"

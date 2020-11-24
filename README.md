@@ -29,13 +29,22 @@ to deal with environment-specific configurations.
 Most common properties are located in the `/config` directory.
 Each application can have its own properties in the `resources` path.
 
-## Secret properties
+### Secret properties
 
 Secret properties can be placed in `local` profile which is active by default
 You should copy `config/application-local.yml.template` to `config/application-local.yml`
 and specify needed properties.
 
 This file is in gitignore, so the data will be on your local copy only.
+
+### Wrap logs in json format
+
+Sometimes it can be useful to write logs in `json` format, e.g. if you monitor your logs with help of `Kibana`, `CloudWatch`.
+`json` format helps to watch logs correctly and use some alerting / monitoring based on logs. 
+
+Logs are recorded if Spring `json-logs` profile is active (by default `json-logs` is included in `production` profile).
+`json` logs are built with help of [`LogstashEncoder`](https://github.com/logstash/logstash-logback-encoder)   
+
 
 ## Use cases
 * Build project: `./gradlew clean build`
