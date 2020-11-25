@@ -18,7 +18,6 @@ object Versions {
     const val springdocOpenapi = "1.4.8"
 
     // logs
-    const val logbackClassic = "1.2.3"
     const val logstashLogbackEncoder = "6.3"
 
     // Libs for testing
@@ -44,6 +43,7 @@ object Libs {
 
     const val springBootStarter = "org.springframework.boot:spring-boot-starter:${Versions.springBoot}"
     const val springBootStarterActuator = "org.springframework.boot:spring-boot-starter-actuator:${Versions.springBoot}"
+    const val springBootStarterLogging = "org.springframework.boot:spring-boot-starter-logging"
     const val springBootStarterWeb = "org.springframework.boot:spring-boot-starter-web:${Versions.springBoot}"
     const val springBootStarterAop = "org.springframework.boot:spring-boot-starter-aop:${Versions.springBoot}"
     const val springBootStarterTest = "org.springframework.boot:spring-boot-starter-test:${Versions.springBoot}"
@@ -56,9 +56,6 @@ object Libs {
 
     // logs
     const val logstashLogbackEncoder = "net.logstash.logback:logstash-logback-encoder:${Versions.logstashLogbackEncoder}"
-    const val logbackClassic = "ch.qos.logback:logback-classic:${Versions.logbackClassic}"
-    const val logbackCore = "ch.qos.logback:logback-core:${Versions.logbackClassic}"
-    const val logbackAccess = "ch.qos.logback:logback-access:${Versions.logbackClassic}"
 
     // Test libraries
     const val junit = "org.junit.jupiter:junit-jupiter-api:${Versions.junit}"
