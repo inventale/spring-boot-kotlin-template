@@ -1,4 +1,4 @@
-This project is a copy of [spring-boot-template](https://gitlab.inventale.com/platform/templates/spring-boot-template) written using kotlin.
+This project is a copy of `spring-boot-template` written using kotlin.
 
 ## Key differences from spring-boot-template
 1) Kotlin instead of Java ;)
